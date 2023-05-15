@@ -5,7 +5,7 @@ Upon completion of the Jenkins_Installation.sh script, follow these steps to edi
 
 1.  Edit the Jenkins service by running the following command:
 ```
-systemctl edit jenkins
+sudo systemctl edit jenkins
 ```
 2.  Add the following lines between the two comments:
 ```
@@ -16,11 +16,11 @@ Environment="JENKINS_OPTS=--pluginroot=/var/cache/jenkins/plugins"
 3.  Start the Jenkins service by running the following command:
 
 ```
-systemctl start jenkins
+sudo systemctl start jenkins
 ```
 4.  Retrieve the initial admin password by running the following command:
 ```
-cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 5.  Finally, open Jenkins in your browser by visiting the following URL:
 ```
