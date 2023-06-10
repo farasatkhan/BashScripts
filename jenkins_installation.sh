@@ -12,7 +12,3 @@ apt-get update
 apt-get install -y fontconfig
 apt-get install -y openjdk-11-jre
 apt-get install -y jenkins
-
-cat /var/lib/jenkins/secrets/initialAdminPassword
-
-echo "http://localhost:8080"
