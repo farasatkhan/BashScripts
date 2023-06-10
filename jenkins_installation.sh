@@ -9,6 +9,10 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkin
 
 # Update your local package index, then finally install Jenkins
 apt-get update
-apt-get install fontconfig
-apt-get install openjdk-11-jre
+apt-get install -y fontconfig
+apt-get install -y openjdk-11-jre
 apt-get install -y jenkins
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+echo "http://localhost:8080"
