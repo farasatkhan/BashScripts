@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Check if script is run as root
+if [[ $EUID -ne 0 ]]; then
+  echo "This script must be run with root privileges."
+  exit 1
+fi
+
 apt-get install curl
 
 # Download and import Jenkins repository key
